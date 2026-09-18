@@ -23,7 +23,30 @@ public class HomePageTest extends BaseTest {
 
     }
     @Test
-    public void verifyMyGrade(){
+    public void myAttemptsNavBar(){
+        homePage.clickMyAttemptsButton();
+        homePage.isMyAttemptsPageDisplayed();
+    }
+    @Test
+    public void myQuizzes(){
+        homePage.clickQuizzes();
+        homePage.isQuizzesPageDisplayed();
+    }
+    @Test
+    public void myQuizzesNaveBar(){
+        homePage.clickStartQuiz();
+        homePage.isQuizzesPageDisplayed();
+    }
+    @Test
+    public void verifyGrade(){
+
+        Assert.assertEquals(homePage.getGrade(),"Grade 5");
+
+    }
+    @Test
+    public void signOut(){
+        homePage.clickSignOut();
+        homePage.isSignInPageDisplayed();
 
     }
 }

@@ -70,4 +70,7 @@ public class HomePage extends UtilityComponent {
     public String getGrade() {
         return getText(grade);
     }
+    public boolean isSignInPageDisplayed(){
+        return waitForTitleIs("Sign in - Quiz");
+    }
 }
