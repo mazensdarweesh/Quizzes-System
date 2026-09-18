@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class SignInTest extends BaseTest {
     @Test
     public void validLogin(){
-        signInPage.signIn("mazen@test.co","Test123!");
+        loginAsValidUser();
         signInPage.homePageIsDisplayed();
     }
 
@@ -22,7 +22,7 @@ public class SignInTest extends BaseTest {
         signInPage.signIn("mazen@test.co","Test123");
         Assert.assertTrue(
                 signInPage.getErrorMessage()
-                        .contains("Password Is Required !!")
+                        .contains("Email or password is not correct.")
         );
     }
 }
