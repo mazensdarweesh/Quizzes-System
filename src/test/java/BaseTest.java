@@ -1,4 +1,5 @@
 import Pages.HomePage;
+import Pages.QuizzesPage;
 import Pages.SignInPage;
 import Pages.SignUpPage;
 import Util.UtilityComponent;
@@ -13,6 +14,7 @@ public class BaseTest {
     protected SignUpPage signUpPage;
     protected SignInPage signInPage;
     protected HomePage homePage;
+    protected QuizzesPage quizzesPage;
 
     private final String BASE_URL = "http://quizy-front.runasp.net/";
     private final String VALID_EMAIL = "mazen@test.co";
@@ -26,6 +28,8 @@ public class BaseTest {
         signUpPage = new SignUpPage(driver);
         signInPage = new SignInPage(driver);
         homePage = new HomePage(driver);
+        quizzesPage = new QuizzesPage(driver);
+
         signInPage.navigateTo(BASE_URL);
 
 
