@@ -43,4 +43,12 @@ public class UtilityComponent {
         return driver.findElement(by);
     }
 
+    public void selectCheckBox(By locator){
+        WebElement checkBox = driver.findElement(locator);
+        if(!checkBox.isSelected())
+        {
+            checkBox.click();
+        }
+    }
+
 }
