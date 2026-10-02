@@ -10,6 +10,9 @@ import java.util.List;
 public class QuizzesPage extends UtilityComponent {
 
     private final By quizRows = By.cssSelector("table tbody tr");
+    private final  By quizBtn = By.cssSelector("a[href='/StudentAnswer/StudentMaster/1']");
+    private final By startQuizBtn = By.cssSelector("a[href='/StudentAnswer/StudentAnswer/1']");
+    private final By quizAlert = By.cssSelector(".alert-warning");
 
 
 
@@ -28,11 +31,23 @@ public class QuizzesPage extends UtilityComponent {
     }
 
     public int getNumberOfQuizzes(){
+        waitElementToDisplay(quizRows);
         return driver.findElements(quizRows).size();
     }
 
     public boolean isQuizDisplayed(String quizTitle) {
         return getQuizTitles().contains(quizTitle);
+    }
+    public void tableQuizStartBtn(){
+        click(quizBtn);
+    }
+    public void startQuiz(){
+        click(startQuizBtn);
+    }
+
+    public WebElement alertDisplayed(){
+        waitElementToDisplay(quizAlert);
+        return findElement(quizAlert);
     }
 
 }

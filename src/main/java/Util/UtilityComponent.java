@@ -2,6 +2,7 @@ package Util;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -37,6 +38,9 @@ public class UtilityComponent {
 
     protected String getText(By locator) {
         return driver.findElement(locator).getText();
+    }
+    public WebElement findElement(By by){
+        return driver.findElement(by);
     }
 
 }

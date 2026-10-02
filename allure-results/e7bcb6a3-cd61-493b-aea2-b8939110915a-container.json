@@ -1,0 +1,1 @@
+{"uuid":"e7bcb6a3-cd61-493b-aea2-b8939110915a","name":"QuizzesTest.logIn","children":["62711aa6-3928-4e05-8b56-236708f05cb4"],"description":"","befores":[{"name":"logIn","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1790947125599,"stop":1790947126700}],"afters":[],"start":1790947125599,"stop":1790947126700}
