@@ -12,8 +12,14 @@ public class StudentAnswerPage extends UtilityComponent {
         super(driver);
     }
 
-    public void selectAnswer(By locator){
-        selectCheckBox(locator);
+    public void selectAnswer(String questionIndex, String answerIndex) {
+        By answer = By.cssSelector(
+                "div.question-card:nth-of-type(" + questionIndex +
+                        ") label.answer-option:nth-of-type(" + answerIndex +
+                        ") input.answer-checkbox"
+        );
+
+        selectCheckBox(answer);
     }
 
     public void submitAnswer(){

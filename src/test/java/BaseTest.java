@@ -1,7 +1,4 @@
-import Pages.HomePage;
-import Pages.QuizzesPage;
-import Pages.SignInPage;
-import Pages.SignUpPage;
+import Pages.*;
 import Util.UtilityComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,9 +12,10 @@ public class BaseTest {
     protected SignInPage signInPage;
     protected HomePage homePage;
     protected QuizzesPage quizzesPage;
+    protected StudentAnswerPage studentAnswerPage;
 
     private final String BASE_URL = "http://quizy-front.runasp.net/";
-    private final String VALID_EMAIL = "mazen@test.co";
+    private final String VALID_EMAIL = "mazend@test.co";
     private final String VALID_PASSWORD = "Test123!";
 
     @BeforeMethod
@@ -29,6 +27,7 @@ public class BaseTest {
         signInPage = new SignInPage(driver);
         homePage = new HomePage(driver);
         quizzesPage = new QuizzesPage(driver);
+        studentAnswerPage = new StudentAnswerPage(driver);
 
         signInPage.navigateTo(BASE_URL);
 
