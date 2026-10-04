@@ -28,8 +28,8 @@ public class SignInPage extends UtilityComponent {
     }
 
     public void signIn(String email,String password){
-        senKeys(loginEmail,email);
-        senKeys(loginPassword,password);
+        sendKeys(loginEmail,email);
+        sendKeys(loginPassword,password);
         click(signUp);
     }
     public List<String> getErrorMessage(){

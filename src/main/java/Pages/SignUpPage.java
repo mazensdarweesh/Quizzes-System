@@ -30,12 +30,12 @@ public class SignUpPage extends UtilityComponent {
                        String confirmPassword, int grade,
                        String email)
     {
-        senKeys(userFirstName,firstName);
-        senKeys(userLastName,lastName);
-        senKeys(userName,username);
-        senKeys(userPassword,password);
-        senKeys(userConfirmPassword,confirmPassword);
-        senKeys(userEmail,email);
+        sendKeys(userFirstName,firstName);
+        sendKeys(userLastName,lastName);
+        sendKeys(userName,username);
+        sendKeys(userPassword,password);
+        sendKeys(userConfirmPassword,confirmPassword);
+        sendKeys(userEmail,email);
         Select gradeDropDown = new Select(driver.findElement(gradeId));
         gradeDropDown.selectByIndex(grade);
         click(signUp);

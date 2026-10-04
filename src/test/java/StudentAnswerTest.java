@@ -3,14 +3,13 @@ import org.testng.annotations.Test;
 
 public class StudentAnswerTest extends BaseTest {
     @BeforeMethod
-    public void login(){
+    public void startQuizFlow(){
         loginAsValidUser();
-    }
-    @BeforeMethod
-    public void startQuiz(){
         homePage.clickStartQuiz();
         quizzesPage.startQuiz();
+        quizzesPage.tableQuizStartBtn();
     }
+
 
     @Test
     public void completeQuiz() {
